@@ -46,16 +46,11 @@ body, html {
 
 .message {
     background-color: #007AFF; 
-    color: white;
     padding: 12px 20px;
     max-width: 350px;
     display: inline-block;
     position: relative;
     border-radius: 20px; /* 둥근 모서리 */
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.3;
-    text-align: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     z-index: 5;
     margin-top: 10px;
@@ -82,13 +77,13 @@ body, html {
     color: #FFF;
     font-family: "Jalnan2";
     font-size: 16px;
-    font-style: normal;
     font-weight: 100;
-    line-height: 22px; /* 137.5% */
-    letter-spacing: 1px;
+    line-height: 1.5;
+    text-align: center;
     width: 277px;
     height: 36px;
     flex-shrink: 0;
+    letter-spacing: 1.2px;
 }
 
 .image {
