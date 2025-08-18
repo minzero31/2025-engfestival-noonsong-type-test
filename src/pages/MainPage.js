@@ -4,8 +4,15 @@ import Jalnan2 from "../assets/fonts/Jalnan2.ttf";
 import school from "../assets/images/mainpage/school.svg";
 import snow from "../assets/images/mainpage/snow.svg";
 import noonsong from "../assets/images/mainpage/noonsong.svg"
+import { useNavigate } from "react-router-dom";
 
-function MainPage({ handleStart }) {
+function MainPage() {
+  const navigate = useNavigate(); 
+
+  const handleStart = () => {
+    navigate("/questions"); 
+  };
+
   return (
     <div className="background">
         <style>
