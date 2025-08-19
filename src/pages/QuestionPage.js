@@ -19,7 +19,6 @@ export default function QuizPage() {
         setCurrent(current + 1);
         } else {
         console.log("최종 답변:", newAnswers);
-        alert("설문이 완료되었습니다!");
         }
     };
 
