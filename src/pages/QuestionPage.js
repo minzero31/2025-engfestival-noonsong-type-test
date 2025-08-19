@@ -38,22 +38,22 @@ export default function QuizPage() {
                 `}
             </style>
             
-        <div className="progress-bar">
-            <div className="progress-fill" style={{ width: `${progress}%` }} />
-            <div className="snowflake" style={{ left: `calc(${progress}% - 12px)` }} />
-        </div>
-
-        <div className="question-container">
-            <h1 className="question-number">{current + 1} / {questions.length}</h1>
-            <h2 className="question" style={{ whiteSpace: "pre-line" }}>{questions[current].question}</h2>
-            <div className="options">
-            {questions[current].options.map((option, idx) => (
-            <button key={idx} onClick={() => handleAnswer(option)} className="option-btn" style={{ whiteSpace: "pre-line" }}>
-                {option.text}
-            </button>
-            ))}
+            <div className="progress-bar">
+                <div className="progress-fill" style={{ width: `${progress}%` }} />
+                <img src={noonsonghead} alt="" className="progress-icon" style={{ left: `calc(${progress}% - 20px)` }} />
             </div>
-        </div>
+
+            <div className="question-container">
+                <h1 className="question-number">{current + 1} / {questions.length}</h1>
+                <h2 className="question" style={{ whiteSpace: "pre-line" }}>{questions[current].question}</h2>
+                <div className="options">
+                {questions[current].options.map((option, idx) => (
+                <button key={idx} onClick={() => handleAnswer(option)} className="option-btn" style={{ whiteSpace: "pre-line" }}>
+                    {option.text}
+                </button>
+                ))}
+                </div>
+            </div>
     </div>
     );
 }
