@@ -3,11 +3,13 @@ import questionsData from "../data/questions.json";
 import "../assets/styles/questionpage.css";
 import Jalnan2 from "../assets/fonts/Jalnan2.ttf";
 import noonsonghead from "../assets/images/questionpage/noonsonghead.png"
+import { useNavigate } from "react-router-dom";
 
 export default function QuizPage() {
     const [questions] = useState(questionsData);
     const [current, setCurrent] = useState(0);
     const [answers, setAnswers] = useState([]);
+    const navigate = useNavigate();
 
         if (questions.length === 0) return <p>Loading...</p>;
 
@@ -19,6 +21,7 @@ export default function QuizPage() {
         setCurrent(current + 1);
         } else {
         console.log("최종 답변:", newAnswers);
+        navigate("/loading");
         }
     };
 

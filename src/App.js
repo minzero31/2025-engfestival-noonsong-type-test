@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import QuestionPage from "./pages/QuestionPage";
+import LoadingPage from "./pages/LoadingPage";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/questions" element={<QuestionPage />} />
-        </Routes>
+        <Route path="/loading" element={<LoadingPage />} />
+      </Routes>
     </Router>
   );
 }
