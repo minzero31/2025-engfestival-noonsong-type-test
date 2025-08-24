@@ -1,0 +1,113 @@
+body, html {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    width: 393px;
+    height: 100vh;
+    background: linear-gradient(180deg, #CCE3F9 48%, #FFF 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.progress-bar {
+    width: 315px;
+    height: 3px;
+    flex-shrink: 0;
+    border: 2px solid #FFF;
+    background: #EBFBFF;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.progress-fill {
+    height: 100%;
+  background-color: #0C2C81;
+  border-radius: 6px;
+  transition: width 0.3s ease; 
+}
+
+.progress-icon {
+  position: absolute;
+    width: 40px;
+    height: 32px;
+    top: 50%; 
+    transform: translateY(-50%); 
+    left: 0; 
+    background: lightgray 50% / cover no-repeat;
+    transition: left 0.3s ease;
+    z-index: 2; 
+}
+
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;      
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.question-number {
+    width: 255px;
+    height: 84px;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: "Jalnan2";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 100% */
+    letter-spacing: 1px;
+
+}
+
+
+.question {
+    width: 346px;
+    height: 141px;
+    flex-shrink: 0;
+    color: #000;
+    text-align: center;
+    font-family: "Jalnan2";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px; /* 145.833% */
+    letter-spacing: 1px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+    
+}
+
+.option-btn {
+    width: 303px;
+    height: 81px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 2px solid #FFF;
+    background: #0C2C81;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: #FFF;               
+    font-family: "Jalnan2";    
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    
+}
