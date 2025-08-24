@@ -1,17 +1,18 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import QuestionPage from "./pages/QuestionPage";
+import LoadingPage from "./pages/LoadingPage";
+import ResultPage from "./pages/ResultPage";
 
-function App() {
+export default function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/questions" element={<QuestionPage />} />
-        </Routes>
+        <Route path="/loading" element={<LoadingPage />} />
+        <Route path="/result" element={<ResultPage />} />
+      </Routes>
     </Router>
   );
 }
-
-export default App;

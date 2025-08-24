@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Jalnan2";
+    src: url("../fonts/Jalnan2.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+   
+/* 캐릭터 이미지 위치 */
+.loading-image {
+    position: absolute;
+    width: 167px;
+    height: 200px;
+    top: 275px;
+    text-align: center;
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  
+  /* 텍스트 위치/스타일 */
+  .loading-text {
+    position: absolute;
+    width: 296px;
+    height: 91px;
+    top: 543px;
+  
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent; /* 필요시 색상 지정 */
+  
+    font-family: "Jalnan2", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+  }
+  
