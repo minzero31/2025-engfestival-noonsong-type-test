@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import "../assets/styles/loadingpage.css";
+import Jalnan2 from "../assets/fonts/Jalnan2.ttf";
 
 import f1 from "../assets/images/noonsongtype/dreamer.svg";
 import f2 from "../assets/images/noonsongtype/talker.svg";
@@ -34,11 +35,21 @@ export default function LoadingPage() {
     }, [navigate, winner, scores, answers]);
   
     return (
-      <div className="background loading-container">
-        <img src={FRAMES[idx]} alt="loading mascot" className="loading-image" />
-        <div className="loading-text">
-          나만의 <br></br> <span style={{ color: "#2b5be3" }}>눈송이</span> 찾는 중…
+      <div className="background">
+      <style>
+            {`
+            @font-face {
+                font-family: "Jalnan2";
+                src: url(${Jalnan2}) format('truetype');
+                font-weight: normal;
+                font-style: normal;
+            }
+            `}
+        </style>
+          <img src={FRAMES[idx]} alt="loading noonsong" className="loading-image" />
+          <div className="loading-text">
+            나만의 <br></br> <span style={{ color: "#1C68B4" }}>눈송이</span> 찾는 중…
+          </div>
         </div>
-      </div>
     );
   }
