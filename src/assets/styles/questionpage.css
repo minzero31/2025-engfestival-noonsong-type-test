@@ -111,3 +111,39 @@ body, html {
     gap: 20px;
     
 }
+
+/* 프로그레스바 폭 유동화 */
+.progress-bar {
+    width: min(90vw, 315px);
+    height: 4px;
+  }
+  
+  /* 진행 아이콘 크기 */
+  .progress-icon {
+    width: clamp(28px, 9vw, 40px);
+    height: auto;
+  }
+  
+  /* 질문 번호/텍스트 */
+  .question-number { font-size: clamp(16px, 5vw, 22px); }
+  .question {
+    width: min(92vw, 346px);
+    font-size: clamp(18px, 6vw, 24px);
+    line-height: 1.45;
+    margin: 12px 0 clamp(20px, 8vw, 50px);
+    text-align: center;
+  }
+  
+  /* 선택지 버튼 */
+  .option-btn {
+    width: min(92vw, 303px);
+    height: clamp(56px, 20vw, 81px);
+    font-size: clamp(14px, 4.5vw, 16px);
+    line-height: 1.3;
+  }
+  .options { gap: clamp(12px, 5vw, 20px); }
+  
+  /* 초소형 디바이스 보강 */
+  @media (max-width: 340px) {
+    .progress-bar { width: 92vw; }
+  }
