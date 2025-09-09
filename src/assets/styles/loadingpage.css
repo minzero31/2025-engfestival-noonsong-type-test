@@ -48,3 +48,20 @@ body, html {
     margin-top: 68px;
   }
   
+  .loading-image {
+    width: min(50vw, 200px);
+    height: auto;
+  }
+  
+  /* 텍스트 폭/폰트 유동화 */
+  .loading-text {
+    width: min(85vw, 296px);
+    font-size: clamp(20px, 6vw, 30px);
+    line-height: 1.1;
+    margin-top: clamp(16px, 6vw, 28px);
+  }
+  
+  /* 아주 작은 기기 보강 */
+  @media (max-width: 360px) {
+    .background { padding: 0 8px; }
+  }
