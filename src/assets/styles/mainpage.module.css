@@ -12,6 +12,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .background {
@@ -46,7 +47,7 @@ body, html {
         0    3px 0 #fff,
         0 10px 4px rgba(0, 0, 0, 0.5);
     font-family: "Jalnan2", sans-serif;
-    font-size: 42px;
+    font-size: clamp(38px, 6vw, 42px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -59,7 +60,6 @@ body, html {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    font-size: 42px;
 }
 
 .message {
@@ -193,60 +193,47 @@ body, html {
         max-width: 100%;   
     }
 
-    .schoolImg {
-        width: 100%;       /* 부모 폭에 맞춤 */
-        max-width: 420px;  /* 최대 420px */
+}
+
+@media (max-width: 395px) {
+    .title {
+        margin-top: 7vh; 
+    }
+
+    .schoolImg { 
+        top: -25vh; 
     }
 
     .noonsongImg {
-        width: 60%;        /* 부모 폭 비율 */
-        max-width: 258px;
+        top: 1vh;
+        width: 55%; 
     }
 
     .noonsongshadow {
-        width: 25%;        /* 부모 폭 비율 */
-        max-width: 98px;
+        top: 31vh; 
+        width: 20%; 
     }
 
-    .snowImg {
-        width: 100%;
-        max-width: 420px;
-    }
-
-    .start-btn {
-        width: 80%;        /* 화면 비율 */
-        max-width: 303px;
-    }
-
-    .start-btn-text {
-        font-size: 20px;   /* 모바일용 글자 축소 */
-    }
-
-    .title h1 {
-        font-size: 40px;   
-    }
-
-    .title h1 span {
-        font-size: 40px;   
-    }
-
-    .message-text {
-        width: 80%;        /* 메시지 폭 조절 */
-        font-size: 14px;   /* 모바일용 글자 축소 */
+    .startBtn {
+        margin-top: 5vh; 
+        margin-bottom: 8vh; 
+        height: 70px; 
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 350px) {
     .schoolImg {
-        width: 95%;         
+        top: -10vh; 
     }
 
     .noonsongImg {
-        top: 10%;           
-        width: 70%;        
+        top: 8vh;
+        width: 55%; 
     }
 
-    .snowImg {
-        top: -15%;          
+    .noonsongshadow {
+        top: 31vh; 
+        width: 20%; 
     }
+
 }
