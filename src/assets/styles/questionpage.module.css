@@ -7,7 +7,6 @@ body, html {
 }
 
 .background {
-    width: 393px;
     height: 100vh;
     background: linear-gradient(180deg, #CCE3F9 48%, #FFF 100%);
     display: flex;
@@ -18,8 +17,8 @@ body, html {
     box-sizing: border-box;
 }
 
-.progress-bar {
-    width: 315px;
+.progressBar {
+    width: 300px;
     height: 3px;
     flex-shrink: 0;
     border: 2px solid #FFF;
@@ -29,14 +28,14 @@ body, html {
     z-index: 1;
 }
 
-.progress-fill {
+.progressFill {
     height: 100%;
   background-color: #0C2C81;
   border-radius: 6px;
   transition: width 0.3s ease; 
 }
 
-.progress-icon {
+.progressIcon {
   position: absolute;
     width: 40px;
     height: 32px;
@@ -48,7 +47,7 @@ body, html {
     z-index: 2; 
 }
 
-.question-container {
+.questionContainer {
     display: flex;
     flex-direction: column;
     align-items: center;      
@@ -56,7 +55,7 @@ body, html {
     margin-top: 30px;
 }
 
-.question-number {
+.questionNumber {
     width: 255px;
     height: 84px;
     flex-shrink: 0;
@@ -68,7 +67,7 @@ body, html {
     font-weight: 400;
     line-height: 22px; /* 100% */
     letter-spacing: 1px;
-
+    width: 430px;
 }
 
 
@@ -89,7 +88,7 @@ body, html {
     
 }
 
-.option-btn {
+.optionBtn {
     width: 303px;
     height: 81px;
     flex-shrink: 0;
@@ -113,19 +112,19 @@ body, html {
 }
 
 /* 프로그레스바 폭 유동화 */
-.progress-bar {
-    width: min(90vw, 315px);
+.progressBar {
+    width: min(90vw, 300px);
     height: 4px;
   }
   
   /* 진행 아이콘 크기 */
-  .progress-icon {
+  .progressIcon {
     width: clamp(28px, 9vw, 40px);
     height: auto;
   }
   
   /* 질문 번호/텍스트 */
-  .question-number { font-size: clamp(16px, 5vw, 22px); }
+  .questionNumber { font-size: clamp(16px, 5vw, 22px); }
   .question {
     width: min(92vw, 346px);
     font-size: clamp(18px, 6vw, 24px);
@@ -135,7 +134,7 @@ body, html {
   }
   
   /* 선택지 버튼 */
-  .option-btn {
+  .optionBtn {
     width: min(92vw, 303px);
     height: clamp(56px, 20vw, 81px);
     font-size: clamp(14px, 4.5vw, 16px);

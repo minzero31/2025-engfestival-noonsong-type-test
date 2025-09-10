@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import NOONSONG_TYPES from "../data/noonsongtype";
-import "../assets/styles/resultpage.css";
+import styles from "../assets/styles/resultpage.module.css";
 
 export default function ResultPage() {
   const { state } = useLocation();
@@ -19,48 +19,44 @@ export default function ResultPage() {
 
   const type = NOONSONG_TYPES[winner];
 
+  const styleClasses = [
+    styles.keywordStyle1, styles.keywordStyle2, styles.keywordStyle3,
+    styles.keywordStyle4, styles.keywordStyle5, styles.keywordStyle6, styles.keywordStyle7,
+  ];
 
-const styleClasses = [
-  "keyword-style-1","keyword-style-2","keyword-style-3",
-  "keyword-style-4","keyword-style-5","keyword-style-6","keyword-style-7",
-];
+  const renderKw = (kw, idx) => {
+    const isObj = kw && typeof kw === "object";
+    const text = isObj ? kw.text : kw;
+    const cls = isObj && kw.className ? kw.className : styleClasses[idx];
 
-
-const renderKw = (kw, idx) => {
-  const isObj = kw && typeof kw === "object";
-  const text = isObj ? kw.text : kw;
-  const cls = isObj && kw.className ? kw.className : styleClasses[idx];
+    return (
+      <div key={idx} className={`${styles.keywordCard} ${cls}`}>
+        {text}
+      </div>
+    );
+  };
 
   return (
-    <div key={idx} className={`keyword-card ${cls}`}>
-      {text}
-    </div>
-  );
-};
+    <div className={`${styles.background} ${styles.resultContainer}`}>
+      <h1 className={styles.resultTitle}>
+        {type.name.split(" ")[0]} <span className={styles.accent}>눈송이</span>
+      </h1>
 
-return (
-  <div className="background result-container">
-    <h1 className="result-title">
-      {type.name.split(" ")[0]} <span className="accent">눈송이</span>
-    </h1>
+      <img src={type.image} alt={winner} className={styles.resultImage} />
+      <div className={styles.resultDesc}>{type.summary}</div>
 
-    <img src={type.image} alt={winner} className="result-image" />
-    <div className="result-desc">{type.summary}</div>
-
-    <div className="keyword-board">
-      {/* 왼쪽 */}
-      <div className="keyword-col">
-        {type.keywords.slice(0, 4).map((kw, i) => renderKw(kw, i))}
+      <div className={styles.keywordBoard}>
+        <div className={styles.keywordCol}>
+          {type.keywords.slice(0, 4).map((kw, i) => renderKw(kw, i))}
+        </div>
+        <div className={styles.keywordCol}>
+          {type.keywords.slice(4).map((kw, i) => renderKw(kw, i + 4))}
+        </div>
       </div>
-      {/* 오른쪽 */}
-      <div className="keyword-col">
-        {type.keywords.slice(4).map((kw, i) => renderKw(kw, i + 4))}
-      </div>
-    </div>
 
-    <button onClick={() => navigate("/")} className="retry-button">
-      다시 테스트하기
-    </button>
-  </div>
+      <button onClick={() => navigate("/")} className={styles.retryButton}>
+        다시 테스트하기
+      </button>
+    </div>
   );
 }
