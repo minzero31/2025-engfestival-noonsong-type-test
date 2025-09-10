@@ -192,6 +192,29 @@ body, html {
         /* width: 100%;        */
         max-width: 100%;   
     }
+    
+}
+
+@media (max-width: 420px) {
+    .background {
+        /* width: 100%;        */
+        max-width: 100%;   
+    }
+
+    .schoolImg { 
+        top: -22vh; 
+    }
+
+    .noonsongImg {
+        top: 1vh;
+        width: 55%; 
+    }
+
+    .noonsongshadow {
+        top: 29vh; 
+        width: 20%; 
+    }
+
 
 }
 
@@ -201,16 +224,16 @@ body, html {
     }
 
     .schoolImg { 
-        top: -25vh; 
+        top: -27vh; 
     }
 
     .noonsongImg {
-        top: 1vh;
+        top: 0vh;
         width: 55%; 
     }
 
     .noonsongshadow {
-        top: 31vh; 
+        top: 32vh; 
         width: 20%; 
     }
 
